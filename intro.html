@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koe: Koodi</title>
+    <style>
+      :root {
+        font-family: "Times New Roman", serif;
+        line-height: 1.4;
+        font-size: clamp(16px, 2vw, 28px);
+        --splash-color: crimson;
+        --fg-color: #000041;
+        --bg-color: #fff5d1;
+        color: var(--fg-color);
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-weight: normal;
+      }
+      h2 {
+        font-size: 2rem;
+        line-height: 1.0;
+        text-indent: -.15rem;
+      }
+      a {
+        color: var(--splash-color);
+        text-decoration: none;
+        padding-bottom: 0.05em;
+        border-bottom: 1px solid; }
+        a:hover {
+          color: var(--color-sub);
+          text-decoration: none; 
+      }
+      code {
+        font-family: 'code', monospace;
+        background-color: black;
+        color: #f1f1f1;
+        padding: 2px 4px;
+        border-radius: 4px;
+      }
+      /* Yleiset asetukset */
+      * {
+        box-sizing: border-box;
+      }
+      html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+      img {
+        width:100%;
+        max-width:100%;
+      }
+
+      /* Leiska */
+      main {
+        padding: 1rem;
+        background-color: #f1f1f1;
+        overflow: auto;
+      }
+      main > *:not(.full-width) {
+        max-width: 40rem;
+        width: 100%;
+        margin: 1rem auto;
+      }
+      /* Sisällön tyylit */
+      img.logo {
+        display: block;
+        max-width: 256px;
+        image-rendering: pixelated;
+      }
+      details {
+        border: 1px ridge var(--splash-color);
+        border-radius: 1rem;
+        padding: 1rem;
+        margin: 1rem 0;
+      }
+    </style>
+</head>
+<body>
+<main>
+  <img class="logo" src="./koe-koodi-logo.png">
+  <p>
+    <em>Koe: Koodi</em> lähestyy nettsivujen tekemistä vastakulttuurisesta näkökulmasta: pelkän tiedonvälityksen sijaan nettisivut voivat toimia itseilmaisun välineenä. Osallistujat oppivat käsin koodaamaan HTML:ää ja CSS:ää kurssin projektien myötä, ja kävimme keskusteluja nykyajan digitaalisesta kulttuurista, erityisesti visuaalisen viestinnän suunnittelun kontekstissa.
+  
+  <ul>
+    <li><b>Osallistujat</b>: Ville Nivala, Satu Malmberg, Uliana Tyllinen, Maiju Rintala, Helmi Lötjönen, Siiri Rajalin, Julia Viljanen, Jenni Sulkala</li>
+    <li><b>Opettaja</b>: Heikki Lotvonen</li>
+    <li><b>Ajankohta</b>: 4.9.–11.10.2024</li>
+    <li><b>Kurssi</b>: Koe I, Track: Koodi</li>
+    <li><b>Koulu</b>: Aalto-yliopiston visuaalisen viestinnän suunnitteluohjelma</li>
+  </ul>
+  
+  <section>
+    <details open>
+      <summary>Tehtävä: Arkisto</summary>
+
+      <p>
+        Tutki netissä olevia digitaalisia arkistoja ja valitse sieltä jokin public domainissa oleva painettu materiaali jonka tulkitset ja muunnat nettisivuksi. Millä tavoin digitaalinen formaatti voi säilyttää painetun vastineensa ainutlaatuisuuden ja välittää sen erityispiirteet? Miten voit tulkita historiallista sisältöä ja tuoda esiin uusia näkökulmia? Miten oma henkilökohtainen persoonasi peilautuu löytämästäsi materiaalista? Nettisivun tulee olla kooltaan enintään 1Mt (1000kt) ja sen tulee olla pääasiassa koodattu HTML:llä ja CSS:llä. Valmis nettisivu julkaistaan Github Pagesilla.
+      </p>
+      <ul>
+        <li>1. Valitse painotuote jostain netissä olevasta digitaalisesta arkistosta. Painotuote voi olla esimerkiksi kirja, lehti tai juliste, yksittäinen artikkeli, sivu tai aukeama, jne, mutta ei esimerkiksi maalaus, esine tai muu vastaava objekti. Sen täytyy olla public domainissa, eli tekijänoikeuksista vapaa. Valinnallasi pitää olla jotain muodollisia ja käsitteellisiä ominaisuuksia joista voit tehdä kiinnostavan ja odottamattoman tulkinnan nettisivun muodossa. Ole avoin ja utelias tässä prosessissa. Voit aluksi vapaasti koota useita vaihtoehtoja, hylätä sitten kaikkein ilmeisimmät ja valita sitten aihe jolla on mielestäsi isoin potentiaali jonkin oudon ja yllättävän tuotoksen tekemiseen.
+        </li><li>2. Mieti eri tapoja ja mahdollisuuksia materiaalin tulkitsemiseksi ja "kääntämiseksi" digitaaliseen muotoon. Huomioi tässä prosessissa sekä sisältö että alkuperäisen teoksen materiaalisuus ja muut muotoseikat. Tavoitteena ei ole suoraan kopioida teksti- ja kuvasisältöä, kuten esim. Project Gutenbergissä, tai esittää sivu sivulta skannattua versiota, kuten digitaalisissa arkistoissa. Tavoitteena on luoda nettisivusta sellainen itsenäinen teos, jossa alkuperäinen materiaali on kriittisesti tutkiskeltu, kuratoitu, samplattu ja tulkittu niin että teos on yhtä paljon (tai jopa enemmän) itsesi kuin alkuperäisen tekijänkin aikaansaannos.
+        </li><li>3. Tutki valitsemasi aiheen mahdollisuuksia ja rajoja, ja mieti miten voisit suunnitella materiaalin pohjalta nettisivun. Mieti mitä välttämättömiä teknisiä ja sisällöllisiä kompromisseja joudut tekemään jotta saat nettisivut alle 1Mt kokoisiksi. Mieti samalla myös, että miten nämä kompromissit voisivat olla hyödyksi ja jopa korostaa tulkitsemaasi materiaalia. Muista että kaikilla tekemilläsi päätöksillä, olivat ne teknisten rajoitusten aiheuttamia tai ei, on merkitystä siihen miten nettisivuillasi käyvät kokevat teoksen.
+        </li><li>4. Tee alustava suunnitelma nettisivustasi, jossa ennakoit mahdollisia haasteita, ja esität millä tavoin projektisi on sekä teknisesti että konseptitasolla toteuttamiskelpoinen. Voit testata ideoitasi pienillä prototyypeillä, jotta tiedät toimivatko ne käytännössä.
+        </li><li>5. Kehitä nettisivu käyttäen pääasiassa HTML:ää ja CSS:ää. Voit käyttää JavaScriptiä harkiten, vain tarvittaessa ja ilman ulkoisia kirjastoja. Nettisivun tulee olla kooltaan enintään 1Mt (1000kt). Ajattele nettisivua interaktiivisena kokonaisuutena ja mieti miten ohjaat (tai et ohjaa) kävijää teoksesi läpi. Palautus viikon 4 lopussa, eli 27.9. (tai kurssin lopussa 11.10. mikäli näyttää siltä että aika ei riitä). Julkaise nettisivut käyttäen Github Pagesia.
+      </li></ul>
+    </details>
+
+    <details open>
+      <summary>Tehtävä: Kokeellinen koodattu juliste</summary>
+      <p>
+        Kurssin viimeisellä viikolla pystytämme Väreeseen näyttelyn.
+      </p>
+      <p>
+        Luo yllättävä, rajoja rikkova, kokeellinen, outo, ruma, poeettinen, herkkä ja/tai pehmeä juliste käyttäen ainoastaan HTML- ja CSS-elementtejä.
+      </p>
+      <p>
+        Teema: <em>Mitä koodilla voi tehdä?</em>
+      </p>
+      <p>Ohjeita ja inspiraatiota:</p>
+      <ul>
+        <li>
+          Voit jatkaa arkistotehtävän teemaa, tai tehdä julisteen arkistolle, silti ajatuksella "mitä koodilla voi tehdä".
+        </li>
+        <li>
+          Älä suunnittele etukäteen mitään. Ajattele tekemällä ja kokeilemalla.
+        </li>
+        <li>
+          Unohda kaikki, mitä olet oppinut "hyvästä" (web)-suunnittelusta. Mitä oudompi, sitä parempi.
+        </li>
+        <li>
+          Selaile MDN:n CSS ja HTML referenssejä. Valitse referensseistä erikoisia elementtejä ja ominaisuuksia ja kokeile miten voisit käyttää niitä. Kokeile epätavallisia väripaletteja, muotoja ja sommitelmia. Miten pitkälle voit venyttää HTML:n ja CSS:n rajoja?
+        </li>
+        <li>
+          Leiki typografialla. Miten voit muuttaa kirjaimia ja sanoja visuaalisiksi taideteoksiksi pelkällä koodilla?
+        </li>
+      </ul>
+    </details>
+  </section>
+</main>
+</body>
+</html>
